@@ -1,5 +1,13 @@
-<header>
-  <h2>PARTY_NAME</h2>
+<form *ngIf="party" (submit)="saveParty()">
+  <label for="">Name</label>
+  <input type="text" [(ngModel)]="party.name" name="name">
 
-  <p>PARTY_DESCRIPTION</p>
-</header>
+  <label for="">Description</label>
+  <input type="text" [(ngModel)]="party.description" name="description">
+
+  <label for="">Location</label>
+  <input type="text" [(ngModel)]="party.location" name="location">
+
+  <button type="submit">Save</button>
+  <a [routerLink]="['/']">Cancel</a>
+</form>
