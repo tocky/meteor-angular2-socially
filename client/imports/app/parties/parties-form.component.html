@@ -1,0 +1,12 @@
+<form [formGroup]="addForm" (ngSubmit)="addParty()">
+  <label for="">Name</label>
+  <input type="text" formControlName="name">
+
+  <label for="">Description</label>
+  <input type="text" formControlName="description">
+
+  <label for="">Location</label>
+  <input type="text" formControlName="location">
+
+  <button type="submit">Add</button>
+</form>
